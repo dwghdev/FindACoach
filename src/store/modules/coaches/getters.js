@@ -5,4 +5,4 @@ export default {
   hasCoaches(state) {
     return state.coaches.length > 0;
   }
-}
+};

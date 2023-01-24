@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 import CoachRegistration from './pages/coaches/CoachRegistration.vue';
-import CoachDetails from './pages/coaches/CoachDetails.vue';
+import CoachDetail from './pages/coaches/CoachDetail.vue';
 import CoachesList from './pages/coaches/CoachesList.vue';
 
 import RequestReceive from './pages/requests/RequestReceive.vue';
@@ -14,13 +14,11 @@ export default createRouter({
     { path: '/', redirect: '/coaches' },
     { path: '/coaches', component: CoachesList },
     {
+      component: CoachDetail,
       path: '/coaches/:id',
-      component: CoachDetails,
+      props: true,
       children: [
-        {
-          path: 'contact',
-          component: ContactCoach
-        } // /coaches/c1/contact
+        { path: 'contact', component: ContactCoach }
       ]
     },
     { path: '/register', component: CoachRegistration },
