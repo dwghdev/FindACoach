@@ -4,7 +4,7 @@ import CoachRegistration from './pages/coaches/CoachRegistration.vue';
 import CoachDetail from './pages/coaches/CoachDetail.vue';
 import CoachesList from './pages/coaches/CoachesList.vue';
 
-import RequestReceive from './pages/requests/RequestReceive.vue';
+import RequestReceived from './pages/requests/RequestReceived.vue';
 import ContactCoach from './pages/requests/ContactCoach.vue';
 import NotFound from './pages/NotFound.vue';
 
@@ -22,7 +22,7 @@ export default createRouter({
       ]
     },
     { path: '/register', component: CoachRegistration },
-    { path: '/request', component: RequestReceive },
+    { path: '/requests', component: RequestReceived },
     { path: '/:notFound(.*)', component: NotFound }
   ]
 });
